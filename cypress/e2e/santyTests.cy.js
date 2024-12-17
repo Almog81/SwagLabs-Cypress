@@ -19,18 +19,16 @@ describe('Luma Tests', () => {
     });
   });
 
-  it('login Test for multiple users', function() {
+  it.only('Test01: login Test for all users', function() {
     this.users.forEach((user) => {
-      homePage.naviHomePage();
       homePage.naviLoginPage();
       loginPage.loginAction(user.email, user.password, user.name);
       homePage.logoutAction();
     });
   });
 
-  it('Create Aconte Test', function() {
+  it('Test02: Create Aconte Test', function() {
     this.newUsers.forEach((newUser) => {
-      homePage.naviHomePage()
       homePage.naviCreateAccountPage()
       createUser.createAcont(newUser)
       homePage.logoutAction();

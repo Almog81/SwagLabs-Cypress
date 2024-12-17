@@ -12,7 +12,7 @@ export class LoginPage {
         cy.get(this.txt_loginEmail).type(email)
         cy.get(this.txt_password).type(pass)
         cy.get(this.btn_login).click()
-        
+        cy.waitForPageLoad() 
     }
     
 }

@@ -23,3 +23,22 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('navigateToHome', () => {
+    cy.visit('https://magento.softwaretestingboard.com/')
+    cy.waitForPageLoad()
+})
+
+Cypress.Commands.add('waitForPageLoad', () => {
+    cy.get('body').should('be.visible')
+    cy.window().then(win => {
+        cy.wrap(new Promise(resolve => {
+            if (win.document.readyState === 'complete') {
+                resolve()
+            } else {
+                win.addEventListener('load', resolve)
+            }
+        }))
+    })
+    cy.document().should('have.property', 'readyState', 'complete')
+})

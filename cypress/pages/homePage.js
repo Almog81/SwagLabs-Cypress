@@ -11,22 +11,22 @@ export class HomePage {
     elm_signOut = '.base';
 
     //Action
-    naviHomePage(){
-        cy.visit(this.url_homePage)
-    }
     naviLoginPage(){
+        cy.navigateToHome()
         cy.contains(this.btn_signIn).click()
+        cy.waitForPageLoad()
     }
     naviCreateAccountPage(){
+        cy.navigateToHome()
         cy.contains(this.btn_createAccount).click()
+        cy.waitForPageLoad()
     }  
 
     logoutAction(){
+        cy.waitForPageLoad()
         cy.get(this.elm_actionSwitch).eq(0).click()
         cy.contains(this.btn_signOut).click()
         cy.get(this.elm_signOut).should('contain.text', "You are signed out")
         cy.contains(this.btn_signIn).should('be.visible')
     }
-    
-    
 }

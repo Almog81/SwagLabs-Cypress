@@ -22,6 +22,7 @@ export class CreateUserPage {
         cy.get(this.txt_password).type(user.password)
         cy.get(this.txt_passwordConfirmation).type(user.password)
         cy.get(this.btn_submit).click()
+        cy.waitForPageLoad()
         cy.get(this.elm_messageSuccess).should('be.visible')
     }
     
