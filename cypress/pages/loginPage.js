@@ -7,7 +7,7 @@ export class LoginPage {
     btn_login = '#SubmitLogin';
     txt_emailCreate = '#email_create';
     btn_submitCrate = '#SubmitCreate';
-    elm_crateAcontError = '#create_account_error';
+    elm_crateAccuontError = '#create_account_error';
 
     //Action
     loginAction(email,pass){
