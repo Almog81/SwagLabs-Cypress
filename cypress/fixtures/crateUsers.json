@@ -1,39 +1,26 @@
 [
-    {
-      "email": "userD34554Test@example.com",
-      "firstName": "John",
-      "lastName": "Doe",
-      "userPassword": "123456",
-      "day": "1",
-      "month": "January",
-      "year": "2000"
-    },
-    {
-      "email": "userA123Test@example.com",
-      "firstName": "Alice",
-      "lastName": "Smith",
-      "userPassword": "password123",
-      "day": "15",
-      "month": "March",
-      "year": "1995"
-    },
-    {
-      "email": "userB567Test@example.com",
-      "firstName": "Bob",
-      "lastName": "Johnson",
-      "userPassword": "securepass",
-      "day": "23",
-      "month": "July",
-      "year": "1988"
-    },
-    {
-      "email": "userC890Test@example.com",
-      "firstName": "Charlie",
-      "lastName": "Brown",
-      "userPassword": "mypassword",
-      "day": "30",
-      "month": "December",
-      "year": "1990"
-    }
-  ]
-  
+  {
+    "email": "userDsf544358Test@example.com",
+    "firstName": "John",
+    "lastName": "Doe",
+    "password": "!@userPassword1234"
+  },
+  {
+    "email": "userA5142FHF83Test@example.com",
+    "firstName": "Alice",
+    "lastName": "Smith",
+    "password": "!@userPassword1234"
+  },
+  {
+    "email": "userB54567Test@example.com",
+    "firstName": "Bob",
+    "lastName": "Johnson",
+    "password": "!@userPassword"
+  },
+  {
+    "email": "userC85490Test@example.com",
+    "firstName": "Charlie",
+    "lastName": "Brown",
+    "password": "!@userPassword1234"
+  }
+]
