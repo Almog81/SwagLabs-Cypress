@@ -19,7 +19,7 @@ describe('Luma Tests', () => {
     });
   });
 
-  it.only('Test01: login Test for all users', function() {
+  it('Test01: login Test for all users', function() {
     this.users.forEach((user) => {
       homePage.naviLoginPage();
       loginPage.loginAction(user.email, user.password, user.name);
