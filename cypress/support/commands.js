@@ -25,7 +25,7 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 Cypress.Commands.add('navigateToHome', () => {
-    cy.visit('https://magento.softwaretestingboard.com/')
+    cy.visit('https://parabank.parasoft.com/')
     cy.waitForPageLoad()
 })
 

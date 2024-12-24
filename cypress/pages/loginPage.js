@@ -2,17 +2,19 @@
 
 export class LoginPage {
     //Objects
-    txt_loginEmail = '#email';
-    txt_password = '#pass';
-    btn_login = '.action.login.primary';
-    elm_crateAccuontError = '#create_account_error';
+    txt_loginEmail = 'input[name="username"]';
+    txt_password = 'input[name="password"]';
+    btn_login = 'input[value="Log In"]';
+    elm_welcome = 'Welcome'
+
     
     //Action
-    loginAction(email,pass,name){
-        cy.get(this.txt_loginEmail).type(email)
-        cy.get(this.txt_password).type(pass)
+    loginAction(user){
+        cy.get(this.txt_loginEmail).type(user.username)
+        cy.get(this.txt_password).type(user.password)
         cy.get(this.btn_login).click()
-        cy.waitForPageLoad() 
+        cy.waitForPageLoad()
+        cy.contains(this.elm_welcome).should('contain.text', user.name)
     }
     
 }

@@ -1,26 +1,26 @@
 [
   {
-    "email": "userDsf544358Test@example.com",
+    "firstName": "Sam",
+    "lastName": "One",
+    "address": "123 Maple St",
+    "city": "Springfield",
+    "state": "IL",
+    "zipCode": "62701",
+    "phone": "555-123-4567",
+    "ssn": "111-22-3333",
+    "username": "samone1234567",
+    "password": "!@Password123"
+  },
+  {
     "firstName": "John",
     "lastName": "Doe",
-    "password": "!@userPassword1234"
-  },
-  {
-    "email": "userA5142FHF83Test@example.com",
-    "firstName": "Alice",
-    "lastName": "Smith",
-    "password": "!@userPassword1234"
-  },
-  {
-    "email": "userB54567Test@example.com",
-    "firstName": "Bob",
-    "lastName": "Johnson",
-    "password": "!@userPassword"
-  },
-  {
-    "email": "userC85490Test@example.com",
-    "firstName": "Charlie",
-    "lastName": "Brown",
-    "password": "!@userPassword1234"
+    "address": "456 Oak St",
+    "city": "Los Angeles",
+    "state": "CA",
+    "zipCode": "90001",
+    "phone": "555-987-6543",
+    "ssn": "444-55-6666",
+    "username": "johndoe45678",
+    "password": "!@Password123"
   }
 ]

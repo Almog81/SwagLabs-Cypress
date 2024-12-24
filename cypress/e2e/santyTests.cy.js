@@ -2,11 +2,11 @@
 
 import { HomePage } from "../pages/homePage"
 import { LoginPage } from "../pages/loginPage"
-import { CreateUserPage } from "../pages/createUserPage"
+import { Register } from "../pages/register"
 
 const homePage = new HomePage;
 const loginPage = new LoginPage;
-const createUser = new CreateUserPage;
+const createUser = new Register;
 
 describe('Luma Tests', () => {
 
@@ -19,20 +19,22 @@ describe('Luma Tests', () => {
     });
   });
 
-  it('Test01: login Test for all users', function() {
-    this.users.forEach((user) => {
-      homePage.naviLoginPage();
-      loginPage.loginAction(user.email, user.password, user.name);
-      homePage.logoutAction();
-    });
-  });
-
-  it('Test02: Create Aconte Test', function() {
+  it('Test01: Create Aconte Test', function() {
     this.newUsers.forEach((newUser) => {
       homePage.naviCreateAccountPage()
       createUser.createAcont(newUser)
       homePage.logoutAction();
     })
   })
+
+  it('Test02: login Test for all users', function() {
+    this.users.forEach((user) => {
+      homePage.naviLoginPage();
+      loginPage.loginAction(user);
+      homePage.logoutAction();
+    });
+  });
+
+
 })
 
