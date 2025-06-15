@@ -1,12 +1,22 @@
 [
     {
-      "username": "samone1234567",
-      "password": "!@Password123",
-      "name": "Sam One"
+      "username": "standard_user",
+      "password": "secret_sauce",
+      "name": "standard"
     },
     {
-      "username": "johndoe45678",
-      "password": "!@Password123",
-      "name": "John Doe"
+      "username": "locked_out_user",
+      "password": "secret_sauce",
+      "name": "locked_out"
+    },
+    {
+      "username": "problem_user",
+      "password": "secret_sauce",
+      "name": "problem"
+    },
+    {
+      "username": "performance_glitch_user",
+      "password": "secret_sauce",
+      "name": "performance_glitch"
     }
 ]

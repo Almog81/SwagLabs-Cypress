@@ -7,16 +7,16 @@ export class HomePage {
     btn_logOut = 'Log Out';
 
     //Action
-    naviLoginPage(){
+    naviLoginPage() {
         cy.navigateToHome()
     }
-    naviCreateAccountPage(){
+    naviCreateAccountPage() {
         cy.navigateToHome()
         cy.contains(this.btn_register).click()
         cy.waitForPageLoad()
-    }  
+    }
 
-    logoutAction(){
+    logoutAction() {
         cy.waitForPageLoad()
         cy.contains(this.btn_logOut).click()
         cy.contains(this.btn_register).should('be.visible')
