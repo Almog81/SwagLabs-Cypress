@@ -10,7 +10,7 @@ const loginPage = new LoginPage;
 const menuPage = new MenuPage;
 const cartPage = new CartPage;
 
-describe('Swa Labs Tests', () => {
+describe('Swag Labs Tests', () => {
 
     beforeEach(function() {
         cy.fixture('loginData').then((data) => {
@@ -32,8 +32,18 @@ describe('Swa Labs Tests', () => {
         });
     });
 
-    it.only('Test02: Add The lowest to cart', function() {
+    it('Test02: Add The lowest to cart', function() {
         loginPage.safeLoginAction(this.users[0]);
         inventoryPage.sortListBy("lohi")
+        inventoryPage.getInventoryItems().then((items) => {
+            expect(items.length).to.be.greaterThan(0);
+            inventoryPage.addItemToCart(0);
+        });
+        cartPage.openCart();
+        cartPage.getCartItems().then((items) => {
+            expect(items.length).to.equal(1);
+            expect(items.eq(0).find(cartPage.elm_inventoryItemName).text()).to.include('Sauce Labs Onesie');
+        });
     });
+
 })

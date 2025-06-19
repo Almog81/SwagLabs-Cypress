@@ -16,7 +16,7 @@ export class LoginPage {
         cy.get(this.txt_password).type(user.password);
         cy.get(this.btn_login).click();
         cy.waitForPageLoad();
-        return this.verifyLoginSuccess(); // נחזיר את הערך החוצה
+        return this.verifyLoginSuccess();
     }
 
     safeLoginAction(user) {
