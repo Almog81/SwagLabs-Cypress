@@ -11,6 +11,7 @@ export class LoginPage {
 
     //Action
     loginAction(user) {
+        cy.navigateToLoginPage()
         cy.get(this.txt_loginEmail).type(user.username);
         cy.get(this.txt_password).type(user.password);
         cy.get(this.btn_login).click();

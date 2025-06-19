@@ -1,11 +1,11 @@
 /// <reference types="cypress" /> 
 
-import { HomePage } from "../pages/homePage"
+import { InvetoryPage } from "../pages/InvetoryPage"
 import { LoginPage } from "../pages/loginPage"
 import { MenuPage } from "../pages/menuPage"
 import { CartPage } from "../pages/cartPage"
 
-const homePage = new HomePage;
+const inventoryPage = new InvetoryPage;
 const loginPage = new LoginPage;
 const menuPage = new MenuPage;
 const cartPage = new CartPage;
@@ -20,7 +20,7 @@ describe('Swa Labs Tests', () => {
 
     it('Test01: login Test for all users', function() {
         this.users.forEach((user) => {
-            homePage.naviLoginPage();
+            cy.navigateToLoginPage()
             loginPage.loginAction(user).then((errorMsg) => {
                 if (errorMsg) {
                     cy.log(`❌ Failed to login as ${user.username}: ${errorMsg}`);
@@ -32,9 +32,8 @@ describe('Swa Labs Tests', () => {
         });
     });
 
-    it('Test02: Add The lowest to cart', function() {
-        homePage.naviLoginPage();
+    it.only('Test02: Add The lowest to cart', function() {
         loginPage.safeLoginAction(this.users[0]);
-        //To do: find the lowest price product and add it to cart
+        inventoryPage.sortListBy("lohi")
     });
 })

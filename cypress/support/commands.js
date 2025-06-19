@@ -24,8 +24,18 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-Cypress.Commands.add('navigateToHome', () => {
-    cy.visit('https://www.saucedemo.com/v1/')
+const url = 'https://www.saucedemo.com/v1/'
+
+Cypress.Commands.add('navigateToLoginPage', () => {
+    cy.visit(url)
+    cy.waitForPageLoad()
+})
+Cypress.Commands.add('navigateToCart', () => {
+    cy.visit(`${url}cart.html`)
+    cy.waitForPageLoad()
+})
+Cypress.Commands.add('navigateToInventory', () => {
+    cy.visit(`${url}inventory.html`)
     cy.waitForPageLoad()
 })
 
